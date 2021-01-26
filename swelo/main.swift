@@ -7,11 +7,15 @@
 
 import Foundation
 
-print("Hello, World!")
+
 
 callme(str: "dupas") { (input: String) in
     return input.count * 2
 }
+
+sw_fork()
+
+print("Hello, World!")
 
 func callme(str: String, cb: (String) -> Int) {
     let rval: Int = cb(str)

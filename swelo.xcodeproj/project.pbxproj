@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		EA8CCD8725B99F4E007E0F42 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA8CCD8625B99F4E007E0F42 /* main.swift */; };
+		EAAFF41B25C08FEB0053F742 /* myfunc.c in Sources */ = {isa = PBXBuildFile; fileRef = EAAFF41A25C08FEB0053F742 /* myfunc.c */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -23,8 +24,11 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		EA8CCD8325B99F4E007E0F42 /* swelo */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = "compiled.mach-o.executable"; path = swelo; sourceTree = BUILT_PRODUCTS_DIR; };
+		EA8CCD8325B99F4E007E0F42 /* swelo */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = swelo; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA8CCD8625B99F4E007E0F42 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		EAAFF41825C08FEB0053F742 /* swelo-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "swelo-Bridging-Header.h"; sourceTree = "<group>"; };
+		EAAFF41925C08FEB0053F742 /* myfunc.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = myfunc.h; sourceTree = "<group>"; };
+		EAAFF41A25C08FEB0053F742 /* myfunc.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = myfunc.c; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +62,9 @@
 			isa = PBXGroup;
 			children = (
 				EA8CCD8625B99F4E007E0F42 /* main.swift */,
+				EAAFF41925C08FEB0053F742 /* myfunc.h */,
+				EAAFF41A25C08FEB0053F742 /* myfunc.c */,
+				EAAFF41825C08FEB0053F742 /* swelo-Bridging-Header.h */,
 			);
 			path = swelo;
 			sourceTree = "<group>";
@@ -93,6 +100,7 @@
 				TargetAttributes = {
 					EA8CCD8225B99F4E007E0F42 = {
 						CreatedOnToolsVersion = 12.3;
+						LastSwiftMigration = 1230;
 					};
 				};
 			};
@@ -120,6 +128,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EA8CCD8725B99F4E007E0F42 /* main.swift in Sources */,
+				EAAFF41B25C08FEB0053F742 /* myfunc.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -244,8 +253,16 @@
 		EA8CCD8B25B99F4E007E0F42 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "swelo/swelo-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
@@ -253,8 +270,15 @@
 		EA8CCD8C25B99F4E007E0F42 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "swelo/swelo-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
