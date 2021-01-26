@@ -23,7 +23,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		EA8CCD8325B99F4E007E0F42 /* swelo */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = swelo; sourceTree = BUILT_PRODUCTS_DIR; };
+		EA8CCD8325B99F4E007E0F42 /* swelo */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = "compiled.mach-o.executable"; path = swelo; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA8CCD8625B99F4E007E0F42 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
